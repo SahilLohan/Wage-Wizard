@@ -4,32 +4,36 @@
 <head>
   <meta charset="utf-8">
   <title>DA Calculation</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
   <!-- navigation bar code -->
-  <div class="topnav">
-
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="netda.html">DA calculation</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 
   <!-- main content -->
 
   <div class="MainContent">
 
-    <!-- <div class="Content">
-        <p>Enter Basic Salary:<br>
-        Enter Old DA%:<br>
-        Enter incremented DA%:<br></p>
-      </div> -->
 
-    <!-- <div class="Content">
-        <form class="DAForm" action="index.html" method="post">
-          <input type="number" name="Salary" value="19500"><br>
-          <input type="number" name="OldDA" value="34"><br>
-          <input type="number" name="DAIncrement" value="3"><br>
-        </form>
-      </div> -->
     <div class="container">
 
       <h2>Fill the following<small>Details</small></h2>
