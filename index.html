@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- NAVIGATION BAR -->
   <div class="topnav" id="myTopnav">
     <a href="index.html" class="active">Home</a>
     <a href="netda.html">DA calculation</a>
@@ -17,6 +18,8 @@
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
+  </div>
+  <div class="center">
   </div>
   <script>
     function myFunction() {
@@ -28,20 +31,29 @@
       }
     }
   </script>
-  <div class="MainContent">
-    <div class="column">
 
-    </div>
-    <div class="column">
 
-    </div>
-    <div class="column">
+  <!-- MAIN CONTENT -->
+  <!-- <div class="MainContent"> -->
 
-    </div>
-  </div>
-  <div class="footer">
+  <!-- left column -->
+  <div id="div1">column1</div>
+
+  <!-- middle column -->
+  <div id="div2">column2
 
   </div>
+
+
+
+  <!-- right column -->
+  <div class="classdiv3" id="div3">
+    <button id="daBtn" type="button" name="button" onclick="document.location='netda.html'">Calculate DA</button>
+    <button id="increBtn" type="button" name="button" onclick="document.location='inccal.html'">Calculate Increment</button>
+    <button id="mixBtn" type="button" name="button" onclick="document.location='mixcal.html'">Calculate Both</button>
+  </div>
+
+  <!-- </div> -->
 </body>
 
 </html>
