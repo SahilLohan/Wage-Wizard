@@ -40,21 +40,28 @@
 
       <form>
 
-        <div class="group">
+        <div class="group" id="employeeName">
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Employee Name e.g. Richard</label>
+        </div>
+
+        <div class="group" id="basicSalary">
           <input type="number" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Basic Salary e.g. 19500</label>
         </div>
 
-        <div class="group">
+        <div class="group" id="currentDA">
           <input type="number" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Current DA e.g. 34</label>
         </div>
 
-        <div class="group">
+        <div class="group" id="DAincrement">
           <input type="number" required>
           <span class="highlight"></span>
           <span class="bar"></span>
@@ -62,6 +69,9 @@
         </div>
 
       </form>
+
+      <button id="sumitbtn" type="button" name="button">Submit</button>
+      <button id="resetbtn" type="button" name="button">Reset</button>
     </div>
 
   </div>

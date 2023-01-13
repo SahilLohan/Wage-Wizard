@@ -1,12 +1,20 @@
 *{
   margin: 0;
 }
+body{
+  /* background-image: url("Images/blue-curve-background_361591-1369.webp");
+  background-repeat: no-repeat;
+  background-size:cover; */
 
+}
+.MainContent{
+  background-color: transparent;
+}
 /* Navigation bar */
 
 .topnav {
   overflow: hidden;
-  background-color: #145DA0;
+  background-image: linear-gradient(#FFF,#0C2D48);
 }
 
 .topnav a {
@@ -61,16 +69,44 @@
 
 
 /* netda.html ki css  */
+
+
 .container {
+  background-color: transparent;
+  border-width: 3px;
+  border-top-style: none;
+  border-bottom-style: none;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-radius: 20px;
   font-family:'san-serif';
-  width:60%;
+  width:50%;
   margin:30px auto 0;
   display:block;
-  background:#FFF;
+  /* background:#FFF; */
   padding:10px 50px 50px;
 }
 
+.container button{
+  border-radius: 10px;
+  border-color:#555;
+  background-color: #A3ABBD;
+  width:90px;
+  height:50px;
+  position: relative;
+}
+.container button:hover{
+  background-color:#3F4756;
+  border-color:#888;
 
+}
+
+#sumitbtn{
+  left:60%;
+}
+#resetbtn{
+  left:10%;
+}
 
 h2 {
   font-weight:normal;
@@ -87,13 +123,14 @@ h2 small {
 .group {
   position:relative;
   margin-bottom:45px;
-  left:25%;
+  left:20%;
 }
 input 				{
+  background-color: transparent;
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:50%;
+  width:60%;
   border:none;
   border-bottom:1px solid #757575;
 }
@@ -176,3 +213,7 @@ input:focus ~ .highlight {
 	from { background:#0096FF; }
   to 	{ width:0; background:transparent; }
 }
+
+
+
+/******************************************************/
