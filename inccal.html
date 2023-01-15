@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Increment calculation</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+  </head>
+  <body>
+    <!-- navigation bar code -->
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="netda.html">DA calculation</a>
+      <a href="inccal.html">Salary Increment</a>
+      <a href="mixcal.html">Full bill</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+    <div class="MainContent">
+
+
+      <div class="container left">
+
+        <h2>Calculate<small>DA</small></h2>
+
+        <form>
+
+          <div class="group" id="employeeName">
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Employee Name e.g. Richard</label>
+          </div>
+
+          <div class="group" id="basicSalary">
+            <input type="number" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Basic Salary e.g. 19500</label>
+          </div>
+
+          <div class="group" id="currentDA">
+            <input type="number" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Increment in Salary e.g. 3</label>
+          </div>
+
+
+        </form>
+
+        <button id="sumitbtn" type="button" name="button">Submit</button>
+        <button id="resetbtn" type="button" name="button">Reset</button>
+      </div>
+
+
+      <div class="container right">
+        <h2>Employee<small>data</small></h2>
+        <table>
+          <thead>
+            <tr>
+              <th class="empnameheader">Employee</th>
+              <th class="salaryheader">Salary</th>
+              <th >Current DA %</th>
+              <th >Salary increment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Will be filled using javascript -->
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </body>
+</html>
