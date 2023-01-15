@@ -2,7 +2,8 @@
   margin: 0;
 }
 body{
-  background-image: url("Images/backgroundImage.jpg");
+  /* background-image: url("Images/backgroundImage.jpg"); */
+  background-image: linear-gradient(#FFF,#B2A4FF);
   background-repeat: no-repeat;
   background-size:cover;
 }
