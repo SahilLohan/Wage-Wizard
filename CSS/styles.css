@@ -71,8 +71,6 @@ body{
 
 
 #div1{
-  /* background-color: skyblue; */
-  /* background-image: linear-gradient(#FFF,#bbdffb,#1a8ae5); */
   width: 27.33%;
   float: right;
   height: 600px;
@@ -87,8 +85,6 @@ body{
 
 }
 #div2{
-  /* background-color: skyblue; */
-  /* background-image: linear-gradient(#FFF,#bbdffb,#1a8ae5); */
   width: 27.33%;
   float: left;
   margin-top: 2%;
@@ -102,8 +98,6 @@ body{
   border-left: none;
 }
 #div3{
-  /* background-color:skyblue; */
-  /* background-image: linear-gradient(#FFF,#bbdffb,#1a8ae5); */
   width: 40.33%;
   margin-top: 10%;
   margin-left: auto;
@@ -142,26 +136,68 @@ body{
 
 .container {
   background-color: transparent;
-  /* border-color: #3F4756;
-  border-width: 3px;
-  border-top-style: none;
-  border-bottom-style: none;
-  border-left-style: solid;
-  border-right-style: solid;
-  border-radius: 20px; */
   font-family:'san-serif';
-  width:50%;
-  margin:30px auto 0;
-  display:block;
-  /* background:#FFF; */
-  padding:10px 50px 50px;
+  margin-top:30px;
+  float:left;
+  padding:10px;
+}
+.container.left{
+  width: 58%;
+  border-width: 2px;
+}
+.container.right{
+  width: 34%;
+  border: black;
+  border-width: thin;
+  border-style: groove;
+  min-height: 392px;
+  margin-left: 15px;
+  border-radius: 10px
 }
 
+table{
+  overflow-y:scroll;
+  text-align: center;
+  border-radius: 10px;
+  width:100%;
+}
+th,tr,td{
+  /* border: 2px solid black; */
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+thead,tbody{
+  background-image:linear-gradient(#B2A4FF,#FFF);
+}
+.empnameheader{
+  width:45%;
+}
+.salaryheader{
+  width: 40%;
+}
+.DAheader{
+  width: 15%;
+}
+.MainContent:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Make conatiners responsive */
+@media screen and (max-width:800px) {
+  .container {
+    width: 100%;
+  }
+}
 .container button{
   border-radius: 10px;
   border-color:#555;
   background-color: #A3ABBD;
-  width:90px;
+  display: inline-block;
+  left:15%;
+  width:20%;
   height:50px;
   position: relative;
 }
