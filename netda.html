@@ -42,29 +42,29 @@
 
       <form>
 
-        <div class="group" id="employeeName">
-          <input type="text" required>
+        <div class="group" >
+          <input class="dapageinput" id="employeeNameda" type="text" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Employee Name e.g. Richard</label>
         </div>
 
-        <div class="group" id="basicSalary">
-          <input type="number" required>
+        <div class="group" >
+          <input class="dapageinput" id="basicSalaryda" type="number" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Basic Salary e.g. 19500</label>
         </div>
 
-        <div class="group" id="currentDA">
-          <input type="number" required>
+        <div class="group" >
+          <input class="dapageinput" id="currentDAda" type="number" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Current DA e.g. 34</label>
         </div>
 
-        <div class="group" id="DAincrement">
-          <input type="number" required>
+        <div class="group" >
+          <input class="dapageinput" id="DAincrementda" type="number" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>DA Increment e.g. 4</label>
@@ -72,8 +72,9 @@
 
       </form>
 
-      <button id="sumitbtn" type="button" name="button">Submit</button>
-      <button id="resetbtn" type="button" name="button">Reset</button>
+      <button class="addnxtbtn" id="addnxtbtnda" type="button" name="button" >Add Next</button>
+      <button id="resetbtn" type="button" name="button" onclick="resetbtnfunc();">Reset</button>
+
     </div>
 
 
@@ -84,17 +85,22 @@
           <tr>
             <th class="empnameheader">Employee</th>
             <th class="salaryheader">Salary</th>
+            <th class="currentdacolumn">Curr. DA</th>
             <th class="DAheader">DA %</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="daTable">
           <!-- Will be filled using javascript -->
-          
+
         </tbody>
       </table>
     </div>
   </div>
 
+<script src="index.js" type="text/javascript"></script>
 </body>
-
+<footer>
+<br><br><br>
+<p>Made With ❤️ by GJUians</p>
+<br>
 </html>

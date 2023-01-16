@@ -1,6 +1,14 @@
 *{
   margin: 0;
 }
+footer{
+  text-align: center;
+  text-decoration:underline;
+}
+br{
+  border-style: solid;
+  border-width: medium;
+}
 body{
   /* background-image: url("Images/backgroundImage.jpg"); */
   background-image: linear-gradient(#FFF,#B2A4FF);
@@ -68,6 +76,7 @@ body{
 
 .MainContent{
   background-color: transparent;
+  min-height:550px;
 }
 
 
@@ -197,7 +206,7 @@ thead,tbody{
   border-color:#555;
   background-color: #A3ABBD;
   display: inline-block;
-  left:15%;
+  left:60%;
   width:20%;
   height:50px;
   position: relative;
@@ -208,9 +217,15 @@ thead,tbody{
 
 }
 
-#sumitbtn{
+#addnxtbtnda{
   left:60%;
 }
+
+#addnxtbtninc{
+  left:60%;
+}
+
+
 #resetbtn{
   left:10%;
 }
