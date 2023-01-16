@@ -1,6 +1,8 @@
 *{
   margin: 0;
 }
+
+
 footer{
   text-align: center;
   text-decoration:underline;
@@ -10,7 +12,6 @@ br{
   border-width: medium;
 }
 body{
-  /* background-image: url("Images/backgroundImage.jpg"); */
   background-image: linear-gradient(#FFF,#B2A4FF);
   background-repeat: no-repeat;
   background-size:cover;
@@ -164,7 +165,12 @@ body{
   margin-left: 15px;
   border-radius: 10px
 }
-
+.uppercontainer{
+  min-height: 350px;
+}
+#showmixresult{
+  left:40%;
+}
 table{
   overflow-y:scroll;
   text-align: center;
