@@ -63,11 +63,6 @@ table.appendChild(row)
 }
 
 
-
-
-
-
-
 // common in all files
 
 document.querySelector("#resetbtn").addEventListener("click",function(){
