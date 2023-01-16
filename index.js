@@ -8,7 +8,10 @@ function NetDaobj(name,salary,da,dainc)
 var arrayda=[];
 document.querySelector("#addnxtbtnda").addEventListener("click",function ()
 {
-    var temp=new NetDaobj(document.getElementById("employeeNameda").value,document.getElementById("basicSalaryda").value,document.getElementById("currentDAda").value,document.getElementById("DAincrementda").value);
+    var temp=new NetDaobj(document.getElementById("employeeNameda").value,
+    document.getElementById("basicSalaryda").value,
+    document.getElementById("currentDAda").value,
+    document.getElementById("DAincrementda").value);
     arrayda.push(temp);
 
     for(var i=0;i<arrayda.length;i++)
@@ -51,24 +54,6 @@ row.appendChild(c4);
 // Append row to table body
 table.appendChild(row)
 }
-
-
-// function SalIncObj(name,salary,inc)
-// {
-//   this.name=name;
-//   this.salary=salary;
-//   this.inc=inc;
-// }
-// var arrayinc;
-//
-// function NetDaobj(name,salary,da,dainc)
-// {
-//   this.name=name;
-//   this.salary=salary;
-//   this.da=da;
-//   this.dainc=dainc;
-// }
-// var arrayboth;
 
 
 
