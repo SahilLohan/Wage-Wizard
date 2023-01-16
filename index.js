@@ -1,3 +1,5 @@
+// netda.html ki Working
+
 function NetDaobj(name,salary,da,dainc)
 {
   this.name=name;
@@ -8,19 +10,24 @@ function NetDaobj(name,salary,da,dainc)
 var arrayda=[];
 document.querySelector("#addnxtbtnda").addEventListener("click",function ()
 {
-    var temp=new NetDaobj(document.getElementById("employeeNameda").value,
-    document.getElementById("basicSalaryda").value,
-    document.getElementById("currentDAda").value,
-    document.getElementById("DAincrementda").value);
-    arrayda.push(temp);
+    let name=document.getElementById("employeeNameda").value;
+    let salary=document.getElementById("basicSalaryda").value;
+    let da=document.getElementById("currentDAda").value;
+    let dainc=document.getElementById("DAincrementda").value;
 
-    for(var i=0;i<arrayda.length;i++)
+    if(name.length==0 || salary.length==0 || da.length==0 || dainc.length==0)
     {
-      alert(arrayda[i].name);
+      alert("Please fill up all details");
     }
-    addRowDa();
-    document.getElementById("resetbtn").click();
+    else{
+      var temp=new NetDaobj(name,salary,da,dainc);
 
+      arrayda.push(temp);
+
+      addRowDa();
+      document.getElementById("resetbtn").click();
+
+    }
 
 });
 
@@ -60,9 +67,10 @@ table.appendChild(row)
 
 
 
-document.querySelector("resetbtn").addEventListener("click",resetbtnfunc);
 
-function resetbtnfunc(){
+// common in all files
+
+document.querySelector("#resetbtn").addEventListener("click",function(){
   // alert("Hello");
   var obj=document.getElementsByTagName("input");
   for(var i=0;i<obj.length;i++)
@@ -70,4 +78,4 @@ function resetbtnfunc(){
     obj[i].value="";
   }
 
-}
+});
