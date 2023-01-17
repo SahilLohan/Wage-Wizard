@@ -1,13 +1,18 @@
 //mix calculation Working
 
-function MixObj(name, basicSal, currDa, daInc, salInc) {
+function MixObj(name, basicSal, currDa, daInc, salInc,incSal,totalDa,totalSal) {
   this.name = name;
   this.basicSal = basicSal;
   this.currDa = currDa;
   this.daInc = daInc;
   this.salInc = salInc;
+  this.incSal = incSal;
+  this.totalDA = totalDa;
+  this.totalSal = totalSal;
+
 }
 var arraymix = [];
+
 document.querySelector("#addnxbtnmix").addEventListener("click", function() {
   let name = document.getElementById("employeeName").value;
   let basicSal = document.getElementById("basicSalary").value;
@@ -17,14 +22,22 @@ document.querySelector("#addnxbtnmix").addEventListener("click", function() {
 
   if (name.length == 0 || basicSal.length == 0 || currDa.length == 0 || daInc.length == 0 || salInc.length == 0) {
     alert("Please fill up all details");
-  } else {
-    var temp = new MixObj(name, basicSal, currDa, daInc, salInc);
+  }
+
+   else {
+     //calculation part:-
+     let incSal = eval(eval(basicSal)*eval(salInc))/100;
+     let salainc = eval(eval(basicSal)+eval(incSal));
+     let tempDA = eval(currDa) + eval(daInc);
+     let totalDA = eval(eval(tempDA)*eval(salainc))/100;
+     let totalSal = eval(eval(salainc)+eval(totalDA));
+
+    var temp = new MixObj(name, basicSal, currDa, daInc, salInc,incSal,totalDA,totalSal);
     arraymix.push(temp);
     addRowMix();
     document.getElementById("resetbtn").click();
   }
 });
-
 
 function addRowMix() {
   // Get the table body element in which you want to add row
@@ -39,6 +52,10 @@ function addRowMix() {
   let c3 = document.createElement("td");
   let c4 = document.createElement("td");
   let c5 = document.createElement('td');
+  let c6 = document.createElement('td');
+  let c7 = document.createElement('td');
+  let c8 = document.createElement('td');
+
   let lastIndex = arraymix.length - 1;
 
   // Insert data to cells
@@ -47,6 +64,9 @@ function addRowMix() {
   c3.innerText = arraymix[lastIndex].currDa;
   c4.innerText = arraymix[lastIndex].daInc;
   c5.innerText = arraymix[lastIndex].salInc;
+  c6.innerText = arraymix[lastIndex].incSal;
+  c7.innerText = arraymix[lastIndex].totalDA;
+  c8.innerText = arraymix[lastIndex].totalSal;
 
   // Append cells to row
   row.appendChild(c1);
@@ -54,7 +74,9 @@ function addRowMix() {
   row.appendChild(c3);
   row.appendChild(c4);
   row.appendChild(c5);
-
+  row.appendChild(c6);
+  row.appendChild(c7);
+  row.appendChild(c8);
   // Append row to table body
   table.appendChild(row)
 }

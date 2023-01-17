@@ -1,32 +1,38 @@
 // inccal ka behaviour
 
-function NetDaobj(iname,isalary,inc)
+function Incobj(name,salary,inc,salInc,totalSal)
 {
-  this.iname=iname;
-  this.isalary=isalary;
+  this.name=name;
+  this.salary=salary;
   this.inc=inc;
+  this.salInc=salInc;
+  this.totalSal=totalSal;
 }
-var arrayinc=[];
+var array=[];
 
 document.querySelector("#addnxtbtninc").addEventListener("click",function ()
 {
-    let iname=document.querySelector("#employeeNameinc").value;
-    let isalary=document.querySelector("#basicSalaryinc").value;
+    let name=document.querySelector("#employeeNameinc").value;
+    let salary=document.querySelector("#basicSalaryinc").value;
     let inc=document.querySelector("#salinc").value;
-    console.log(iname + " " + isalary + " " + inc);
-    if(iname.length==0 || isalary.length==0 || inc.length==0)
-    {
-      alert("Please fill up all details");
-    }
-    else{
-      var temp=new NetDaobj(iname,isalary,inc);
+    console.log(name + " " + salary + " " + inc);
 
-      arrayinc.push(temp);
+      if(name.length==0 || salary.length==0 || inc.length==0)
+      {
+        alert("Please fill up all details");
+      }
+      else{
+        let salInc = eval(eval(salary)*eval(inc))/100;
+        let totalSal = eval(eval(salary)+eval(salInc));
 
-      addRowInc();
-      document.getElementById("resetbtn").click();
+        var temp=new Incobj(name,salary,inc,salInc,totalSal);
 
-    }
+        array.push(temp);
+
+        addRowInc();
+        document.getElementById("resetbtn").click();
+
+      }
 
 });
 
@@ -41,18 +47,23 @@ let row = document.createElement("tr")
 let c1 = document.createElement("td")
 let c2 = document.createElement("td")
 let c3 = document.createElement("td")
-
-let lastIndex=arrayinc.length-1;
+let c4 = document.createElement("td")
+let c5 = document.createElement("td")
+let lastIndex=array.length-1;
 
 // Insert data to cells
-c1.innerText = arrayinc[lastIndex].iname;
-c2.innerText = arrayinc[lastIndex].isalary;
-c3.innerText = arrayinc[lastIndex].inc;
+c1.innerText = array[lastIndex].name;
+c2.innerText = array[lastIndex].salary;
+c3.innerText = array[lastIndex].inc;
+c4.innerText = array[lastIndex].salInc;
+c5.innerText = array[lastIndex].totalSal;
 
 // Append cells to row
 row.appendChild(c1);
 row.appendChild(c2);
 row.appendChild(c3);
+row.appendChild(c4);
+row.appendChild(c5);
 
 // Append row to table body
 table.appendChild(row)
