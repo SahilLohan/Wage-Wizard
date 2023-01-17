@@ -218,8 +218,8 @@ thead,tbody{
   border-color:#555;
   background-color: #A3ABBD;
   display: inline-block;
-  left:60%;
-  width:20%;
+  left:40%;
+  width:25%;
   height:50px;
   position: relative;
 }
@@ -239,7 +239,7 @@ thead,tbody{
 
 
 #resetbtn{
-  left:10%;
+  left:0%;
 }
 
 h2 {

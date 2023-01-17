@@ -87,7 +87,7 @@
 
     <div class="container right">
 
-      <div class="uppercontainer">
+      <div class="uppercontainer" id="ResultToBeDownloaded">
         <h2>Employee<small>data</small></h2>
         <table>
           <thead>
@@ -107,12 +107,22 @@
       </div>
 
       <div class="lowercontainer">
-        <button id="showmixresult" type="button" name="button">View Result</button>
+        <button id="showmixresult" type="button" name="button" onclick="viewResultFunc();">Download</button>
+        <script type="text/javascript">
+
+          function viewResultFunc()
+          {
+            var element = document.getElementById('ResultToBeDownloaded');
+            html2pdf(element);
+          }
+        </script>
       </div>
 
     </div>
   </div>
   <script src="mixcal.js" type="text/javascript"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" type="text/javascript">
 </body>
 <footer>
   <br>
