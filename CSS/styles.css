@@ -2,7 +2,6 @@
   margin: 0;
 }
 
-
 footer{
   text-align: center;
   text-decoration:underline;
@@ -21,17 +20,24 @@ body{
 
 .topnav {
   overflow: hidden;
-  background-image: linear-gradient(#B2A4FF,#FFF);
+  background-image: linear-gradient(#B2A4FF,#7644c3);
+  /* border-style: solid; */
+  /* border-right: black;
+  border-width: thin; */
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: black;
+  color: white;
   text-align: center;
-  padding: 15px 17px;
+  padding: 7px 13px;
+  margin: 4px;
   text-decoration: none;
   font-size: 17px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10px;
 }
 
 .topnav a:hover {
@@ -40,7 +46,7 @@ body{
 }
 
 .topnav a.active {
-  background-color: #B2A4FF;
+  background-color: #593392;
   color: white;
 }
 .topnav a.active:hover {

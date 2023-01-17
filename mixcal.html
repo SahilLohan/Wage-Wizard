@@ -44,35 +44,35 @@
 
       <form>
 
-        <div class="group" id="employeeName">
-          <input type="text" required>
+        <div class="group">
+          <input type="text" id="employeeName" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Employee Name e.g. Richard</label>
         </div>
 
-        <div class="group" id="basicSalary">
-          <input type="number" required>
+        <div class="group">
+          <input type="number" id="basicSalary" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Basic Salary e.g. 19500</label>
         </div>
 
-        <div class="group" id="currentDA">
-          <input type="number" required>
+        <div class="group">
+          <input type="number" id="currentDA" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Current DA e.g. 34</label>
         </div>
 
-        <div class="group" id="DAincrement">
-          <input type="number" required>
+        <div class="group">
+          <input type="number" id="DAincrement" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>DA Increment e.g. 4</label>
         </div>
-        <div class="group" id="DAincrement">
-          <input type="number" required>
+        <div class="group">
+          <input type="number" id="Salincrement" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Salary increment e.g. 4</label>
@@ -92,14 +92,14 @@
         <table>
           <thead>
             <tr>
-              <th >Employee</th>
-              <th >Salary</th>
-              <th >Current DA %</th>
-              <th >DA increment</th>
-              <th >Salary increment</th>
+              <th>Employee</th>
+              <th>Salary</th>
+              <th>Current DA %</th>
+              <th>DA increment</th>
+              <th>Salary increment</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="mixTable">
             <!-- Will be filled using javascript -->
 
           </tbody>
@@ -107,17 +107,18 @@
       </div>
 
       <div class="lowercontainer">
-        <button id="showmixresult"type="button" name="button">View Result</button>
+        <button id="showmixresult" type="button" name="button">View Result</button>
       </div>
 
     </div>
   </div>
-
+  <script src="mixcal.js" type="text/javascript"></script>
 </body>
 <footer>
   <br>
   <br><br>
-<p>Made With ❤️ by GJUians</p>
-<br>
+  <p>Made With ❤️ by GJUians</p>
+  <br>
 </footer>
+
 </html>
