@@ -204,7 +204,10 @@ body {
 .uppercontainer {
   min-height: 350px;
 }
-
+.lowercontainer button{
+  width:fit-content;
+  padding:10px;
+}
 #showmixresult {
   left: 40%;
 }
