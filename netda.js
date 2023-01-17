@@ -9,7 +9,7 @@ function NetDaobj(name,salary,da,dainc,totalDA,totalSalary)
   this.totalDA=totalDA;
   this.totalSalary=totalSalary;
 }
-var arrayda=[];
+var array=[];
 document.querySelector("#addnxtbtnda").addEventListener("click",function ()
 {
     let name=document.getElementById("employeeNameda").value;
@@ -26,7 +26,7 @@ document.querySelector("#addnxtbtnda").addEventListener("click",function ()
       let totalSalary=eval(eval(salary)+eval(totalDA));
       var temp=new NetDaobj(name,salary,da,dainc,totalDA,totalSalary);
 
-      arrayda.push(temp);
+      array.push(temp);
 
       addRowDa();
 
@@ -51,15 +51,15 @@ let c4 = document.createElement("td")
 let c5 = document.createElement("td")
 let c6 = document.createElement("td")
 
-let lastIndex=arrayda.length-1;
+let lastIndex=array.length-1;
 
 // Insert data to cells
-c1.innerText = arrayda[lastIndex].name;
-c2.innerText = arrayda[lastIndex].salary;
-c3.innerText = arrayda[lastIndex].da;
-c4.innerText = arrayda[lastIndex].dainc;
-c5.innerText = arrayda[lastIndex].totalDA;
-c6.innerText = arrayda[lastIndex].totalSalary;
+c1.innerText = array[lastIndex].name;
+c2.innerText = array[lastIndex].salary;
+c3.innerText = array[lastIndex].da;
+c4.innerText = array[lastIndex].dainc;
+c5.innerText = array[lastIndex].totalDA;
+c6.innerText = array[lastIndex].totalSalary;
 
 
 // Append cells to row
