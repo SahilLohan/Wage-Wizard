@@ -1,11 +1,13 @@
 // netda.html ki Working
 
-function NetDaobj(name,salary,da,dainc)
+function NetDaobj(name,salary,da,dainc,totalDA,totalSalary)
 {
   this.name=name;
   this.salary=salary;
   this.da=da;
   this.dainc=dainc;
+  this.totalDA=totalDA;
+  this.totalSalary=totalSalary;
 }
 var arrayda=[];
 document.querySelector("#addnxtbtnda").addEventListener("click",function ()
@@ -20,11 +22,14 @@ document.querySelector("#addnxtbtnda").addEventListener("click",function ()
       alert("Please fill up all details");
     }
     else{
-      var temp=new NetDaobj(name,salary,da,dainc);
+      let totalDA=eval(eval(salary)*eval(eval(da)+eval(dainc))/100);
+      let totalSalary=eval(eval(salary)+eval(totalDA));
+      var temp=new NetDaobj(name,salary,da,dainc,totalDA,totalSalary);
 
       arrayda.push(temp);
 
       addRowDa();
+
       document.getElementById("resetbtn").click();
 
     }
@@ -43,6 +48,8 @@ let c1 = document.createElement("td")
 let c2 = document.createElement("td")
 let c3 = document.createElement("td")
 let c4 = document.createElement("td")
+let c5 = document.createElement("td")
+let c6 = document.createElement("td")
 
 let lastIndex=arrayda.length-1;
 
@@ -51,15 +58,22 @@ c1.innerText = arrayda[lastIndex].name;
 c2.innerText = arrayda[lastIndex].salary;
 c3.innerText = arrayda[lastIndex].da;
 c4.innerText = arrayda[lastIndex].dainc;
+c5.innerText = arrayda[lastIndex].totalDA;
+c6.innerText = arrayda[lastIndex].totalSalary;
+
 
 // Append cells to row
 row.appendChild(c1);
 row.appendChild(c2);
 row.appendChild(c3);
 row.appendChild(c4);
+row.appendChild(c5);
+row.appendChild(c6);
+
+
 
 // Append row to table body
-table.appendChild(row)
+table.appendChild(row);
 }
 
 
