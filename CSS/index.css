@@ -1,0 +1,112 @@
+body{
+  text-align: center;
+}
+
+h1{
+  padding: 1.5em 0 1.5em 0;
+}
+.top-container{
+  background-color: #B9F3FC;
+}
+.top-container img{
+  width:3%;
+}
+
+.top-container p{
+  width:50%;
+  margin:12px auto 12px auto;
+  line-height: 25px;
+}
+.top-container button{
+  margin:30px auto 40px auto;
+}
+
+
+.video-container {
+  height: 600px;
+}
+.video-container h1{
+  color: #579BB1;
+}
+.button-container {
+  background-color: #B9F3FC;
+  padding:20px;
+}
+
+.button-container h2{
+  color: white;
+  font-size: 60px;
+}
+.button-container h3{
+  color: #579BB1;
+}
+
+.button-container h3:hover{
+  color: white;
+}
+
+.button-row img{
+  width: 14%;
+  border-radius: 18px;
+  padding:8px;
+}
+.button-row img:hover{
+  width: 16%;
+  background-color: white;
+}
+.button-row{
+  margin: 100px auto;
+  width:70%;
+  text-align: left;
+}
+.DAimg{
+  float:left;
+  margin-right: 30px;
+}
+
+.INCimg{
+  float:right;
+  margin-left: 30px;
+}
+
+.FULLimg{
+  float:left;
+  margin-right: 30px;
+}
+
+.contact-me{
+  margin: 60px auto;
+}
+
+.contact-me h1{
+  color: #579BB1;
+  font-size: 60px;
+  padding: 0;
+  margin:0;
+}
+
+.contact-me h3{
+  margin:20px;
+}
+
+.contact-me p{
+  height:25px;
+  margin:30px auto 50px;
+}
+.bottom-container{
+  padding: 35px;
+}
+.bottom-container p{
+  color: white;
+  margin: 10px auto;
+}
+
+.bottom-container a{
+  color: #B9F3FC;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.bottom-container a:hover{
+  color: white;
+}
