@@ -10,7 +10,7 @@ function Incobj(name,salary,inc,salInc,totalSal)
 }
 var array=[];
 
-document.querySelector("#addnxtbtninc").addEventListener("click",function ()
+document.querySelector("#addnxtbtninc").addEventListener("click",function()
 {
     let name=document.querySelector("#employeeNameinc").value;
     let salary=document.querySelector("#basicSalaryinc").value;
@@ -69,6 +69,19 @@ row.appendChild(c5);
 table.appendChild(row)
 }
 
+
+function viewResultFunc() {
+  alert("Please click save following ok");
+    var divContents = document.getElementById("ResultToBeDownloaded").innerHTML;
+    var a = window.open('', '', 'height=500, width=500');
+    a.document.write('<html><head>');
+    a.document.write('<style>body{text-align: center;}h1{padding: 1.5em 0 1.5em 0;}</style></head>');
+    a.document.write('<body > <h1>Employee Report <br>');
+    a.document.write(divContents);
+    a.document.write('</body></html>');
+    a.document.close();
+    a.print();
+}
 
 
 // common in all files

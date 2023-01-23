@@ -1,109 +1,145 @@
-* {
-  margin: 0;
-}
-
-/* css for table scrolling */
-.uppercontainer{
-       overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
-       height: 400px; /* gives an initial height of 200px to the table */
-       overflow-x: auto; /* make the table scrollable if height is more than 200 px  */
-       width: 100%; /* gives an initial height of 200px to the table */
-
-       /* Hide scrollbar for IE, Edge and Firefox */
-
-}
-footer {
+body{
   text-align: center;
-  text-decoration: underline;
 }
 
-br {
-  border-style: solid;
-  border-width: medium;
+h1{
+  padding: 1.5em 0 1.5em 0;
+}
+a{
+  color: #B9F3FC;
+  text-decoration: none;
+  margin: 10px;
+}
+thead, tbody ,th {
+  background-image: linear-gradient(#49b4df, #FFF);
 }
 
-body {
-  background-image: linear-gradient(#FFF, #B2A4FF);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* netda.html ki css  */
-.container {
-  background-color: transparent;
-  font-family: 'san-serif';
-  margin-top: 30px;
-  float: left;
-  padding: 10px;
-}
-
-
-
-thead, tbody {
-  background-image: linear-gradient(#B2A4FF, #FFF);
-}
-
-.empnameheader {
-  width: 45%;
-}
-
-.salaryheader {
-  width: 40%;
-}
-
-.DAheader {
-  width: 15%;
-}
-
-.MainContent:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Make conatiners responsive */
-@media screen and (max-width:800px) {
-  .container {
-    width: 100%;
-  }
-}
-
-.container button {
+th, tr, td {
   border-radius: 10px;
-  border-color: #555;
-  background-color: #A3ABBD;
-  display: inline-block;
-  left: 60%;
-  width: 20%;
-  height: 50px;
-  position: relative;
+  height: 15px;
+} 
+
+.inputcontainer h1{
+  color: white;
 }
 
-.container button:hover {
-  background-color: #3F4756;
-  border-color: #888;
+.inputcontainer button{
+  margin: 20px 100px;
+}
+.inputcontainer{
+  padding-bottom: 70px;
+  width:100%;
+}
+form{
+  width:60%;
+  margin:auto;
 }
 
-#addnxtbtnda {
-  left: 60%;
+label{
+  color:white;
+}
+.resultcontainer{
+  width: auto;
+  height: auto;
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
 }
 
-#addnxtbtninc {
-  left: 60%;
+
+.resultcontainer h2{
+  margin: 70px auto;
 }
 
 
-#resetbtn{
-  left:0%;
+.resultcontainer table{
+  min-width:70%;
+  min-height: 200px;
+  border-collapse: collapse;
+  background: #B9F3FC;
+  border-radius: 20px;
+  margin:0 auto 50px auto;
+  overflow: scroll;
+
+}
+-webkit-scrollbar{
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none;
 }
 
-h2 {
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 50px;
+.button-container {
+  background-color: #B9F3FC;
+  padding:20px;
 }
 
-h2 small {
-  font-weight: normal;
-  color: #888;
-  display: block;
+.button-container h2{
+  color: white;
+  font-size: 60px;
 }
+.button-container h3{
+  color: #579BB1;
+}
+
+.button-container h3:hover{
+  color: white;
+}
+
+.button-row img{
+  width: 14%;
+  min-width: 80px;
+  border-radius: 18px;
+  padding:8px;
+}
+.button-row img:hover{
+  width: 16%;
+  background-color: white;
+}
+.button-row{
+  margin: 100px auto;
+  width:70%;
+  text-align: left;
+}
+.DAimg{
+  float:left;
+  margin-right: 30px;
+}
+
+.INCimg{
+  float:right;
+  margin-left: 30px;
+}
+
+.FULLimg{
+  float:left;
+  margin-right: 30px;
+}
+
+.contact-me{
+  margin: 60px auto;
+}
+
+.contact-me h1{
+  color: #579bb1;
+  font-size: 60px;
+  padding: 0;
+  margin:0;
+}
+
+.contact-me h3{
+  margin:20px;
+}
+
+.contact-me p{
+  height:25px;
+  margin:30px auto 50px;
+}
+.bottom-container{
+  padding: 35px;
+}
+.bottom-container p{
+  color: white;
+  margin: 10px auto;
+}
+
+.bottom-container a:hover{
+  color: white;
+} 

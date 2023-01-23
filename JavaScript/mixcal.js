@@ -13,7 +13,8 @@ function MixObj(name, basicSal, currDa, daInc, salInc,incSal,totalDa,totalSal) {
 }
 var arraymix = [];
 
-document.querySelector("#addnxbtnmix").addEventListener("click", function() {
+document.querySelector("#addnxtbtnmix").addEventListener("click",function ()
+{
   let name = document.getElementById("employeeName").value;
   let basicSal = document.getElementById("basicSalary").value;
   let currDa = document.getElementById("currentDA").value;
@@ -23,8 +24,7 @@ document.querySelector("#addnxbtnmix").addEventListener("click", function() {
   if (name.length == 0 || basicSal.length == 0 || currDa.length == 0 || daInc.length == 0 || salInc.length == 0) {
     alert("Please fill up all details");
   }
-
-   else {
+  else {
      //calculation part:-
      let incSal = eval(eval(basicSal)*eval(salInc))/100;
      let salainc = eval(eval(basicSal)+eval(incSal));
@@ -80,6 +80,22 @@ function addRowMix() {
   // Append row to table body
   table.appendChild(row)
 }
+
+
+function viewResultFunc() {
+  alert("Please click save following ok");
+    var divContents = document.getElementById("ResultToBeDownloaded").innerHTML;
+    var a = window.open('', '', 'height=500, width=500');
+    a.document.write('<html><head>');
+    a.document.write('<style>body{text-align: center;}h1{padding: 1.5em 0 1.5em 0;}</style></head>');
+    a.document.write('<body > <h1>Employee Report <br>');
+    a.document.write(divContents);
+    a.document.write('</body></html>');
+    a.document.close();
+    a.print();
+}
+
+
 
 
 // common in all files
