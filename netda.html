@@ -2,132 +2,192 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="icon" type="image/x-icon" href="CSS/Images/favi.png">
-  <title>DA Calculation</title>
-  <link rel="stylesheet" href="CSS/styles.css">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Generator</title>
+  <link rel="icon" type="image/x-icon" href="CSS/Images/WebIcon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="CSS/netda.css">
 </head>
 
 <body>
-  <!-- navigation bar code -->
-  <div class="topnav" id="myTopnav">
-    <a href="index.html" class="active">Home</a>
-    <a href="netda.html">DA calculation</a>
-    <a href="inccal.html">Salary Increment</a>
-    <a href="mixcal.html">Full bill</a>
-    <a href="contact.html">Contact</a>
-    <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">SalaryCal</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Calculate
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="netda.html">Daily Allowance</a></li>
+              <li><a class="dropdown-item" href="inccal.html">Salary Increment</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="mixcal.html">Full Salary</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#About">About</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Input div -->
+  <div class="inputcontainer bg-dark">
+
+    <h1>Welcome to DA Calculator</h1>
+
+    <form>
+
+      <div class="group">
+        <input class="dapageinput" id="employeeNameda" type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Employee Name ex. Richard</label>
+      </div>
+
+      <div class="group">
+        <input class="dapageinput" id="basicSalaryda" type="number" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Basic Salary ex. 19500</label>
+      </div>
+
+      <div class="group">
+        <input class="dapageinput" id="currentDAda" type="number" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Current DA ex. 34</label>
+      </div>
+
+      <div class="group">
+        <input class="dapageinput" id="DAincrementda" type="number" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>DA Increment ex. 4</label>
+      </div>
+
+    </form>
+
+    <button class="btn btn-primary btn-lg " id="addnxtbtnda" type="button" name="button">Add Next</button>
+    <button class="btn btn-secondary btn-lg " id="resetbtn" type="reset" name="button">Reset</button>
+
   </div>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-  </script>
 
-  <!-- main content -->
+<!-- result div -->
 
-  <div class="MainContent">
+  
+    <div class="resultcontainer" id="ResultToBeDownloaded">
+      <h2>Employee data</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Curr DA%</th>
+            <th>DA inc.%</th>
+            <th>Total DA</th>
+            <th>Total Salary</th>
+          </tr>
+        </thead>
+        <tbody id="daTable">
+          <!-- Will be filled using javascript -->
 
-
-    <div class="container left">
-
-      <h2>Calculate<small>DA</small></h2>
-
-      <form>
-
-        <div class="group" >
-          <input class="dapageinput" id="employeeNameda" type="text" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <label>Employee Name e.g. Richard</label>
-        </div>
-
-        <div class="group" >
-          <input class="dapageinput" id="basicSalaryda" type="number" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <label>Basic Salary e.g. 19500</label>
-        </div>
-
-        <div class="group" >
-          <input class="dapageinput" id="currentDAda" type="number" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <label>Current DA e.g. 34</label>
-        </div>
-
-        <div class="group" >
-          <input class="dapageinput" id="DAincrementda" type="number" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <label>DA Increment e.g. 4</label>
-        </div>
-
-      </form>
-
-      <button class="addnxtbtn" id="addnxtbtnda" type="button" name="button" >Add Next</button>
-      <button id="resetbtn" type="button" name="button">Reset</button>
-
+        </tbody>
+      </table>
     </div>
 
-    <div class="container right">
-
-      <div class="uppercontainer" id="ResultToBeDownloaded">
-        <h2>Employee<small>data</small></h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Salary</th>
-              <th>Curr DA%</th>
-              <th>DA inc.%</th>
-              <th>Total DA</th>
-              <th>Total Salary</th>
-            </tr>
-          </thead>
-          <tbody id="daTable">
-            <!-- Will be filled using javascript -->
-
-          </tbody>
-        </table>
-      </div>
-      <div class="lowercontainer">
-        <button id="showmixresult" type="button" name="button" onclick="viewResultFunc();">Download</button>
-        <script type="text/javascript">
-
-          function viewResultFunc()
-          {
-            var element = document.getElementById('ResultToBeDownloaded');
-            html2pdf(element);
-          }
-        </script>
-      </div>
-      </div>
+      <button class="btn btn-primary btn-lg" type="button" name="button" onclick="viewResultFunc();">Download</button>
+      <script type="text/javascript">
+        function viewResultFunc() {
+          var element = document.getElementById('ResultToBeDownloaded');
+          alert("Downloading the report")
+          html2pdf(element);
+        }
+      </script>
 
 
+  <div class="">
+    <h1>Explore More</h1>
+  </div>
 
+  <div class="button-container" id="Calculate">
+    <h2>Features</h2>
+    <div class="button-row">
+      <img onclick="document.location='netda.html'" class="DAimg" src="CSS/Images/DA.png" alt="">
+      <h3 onclick="document.location='netda.html'">DA calculation</h3>
+      <p>Dearness Allowance (DA) is the cost-of-living adjustment allowance that the government provides to both current and retired members of the public sector</p>
     </div>
+    <div class="button-row">
+      <img onclick="document.location='inccal.html'" class="INCimg" src="CSS/Images/INC.png" alt="">
+      <h3 onclick="document.location='inccal.html'">Salary Increment calculation</h3>
+      <p>Salary increment is measured as a percentage of an employee's overall base pay. It is usually a percentage of the employee's annual salary. Increments are used by employers to increase or decrease base salary, as well as to grant incentives.
+      </p>
+    </div>
+    <div class="button-row">
+      <img onclick="document.location='mixcal.html'" class="FULLimg" src="CSS/Images/FULL.png" alt="">
+      <h3 onclick="document.location='mixcal.html'">Full Salary calculations</h3>
+      <p>Full Salary will be calculated including all types of allowances: 1.DA 2.HRA 3.Medical 4.Travel with Salary Increment</p>
+    </div>
+  </div>
 
 
-<script src="netda.js" type="text/javascript"></script>
+  <!-- Contact div -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" type="text/javascript">
+  <div class="contact-me" id="contact">
+    <h1>Get In Touch</h1>
+    <h3>If you want us to create a website for you 💕</h3>
+    <p>Connect with me using the button below to talk with me.</p>
+    <a class="btn btn-info btn-lg btn-block" href="mailto:sahillohan07@email.com">CONTACT ME</a>
+  </div>
+  </div>
 
-</script>
+
+
+
+  <!-- Footer -->
+
+  <div class="bottom-container bg-dark " id="About">
+    <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+    <a class="footer-link" href="https://twitter.com/">Instagram</a>
+    <a class="footer-link" href="https://www.appbrewery.co/">Github</a>
+    <br>
+    <p>© 2023 SalaryCal @ GJUians.</p>
+  </div>
+
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="JavaScript/netda.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" type="text/javascript"></script>
+
 </body>
-<footer>
-<br><br><br>
-<p>Made With ❤️ by GJUians</p>
-<br>
-<br>
-<br>
-</footer>
+
 </html>

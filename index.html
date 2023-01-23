@@ -12,31 +12,11 @@
 
 <body>
 
-  <!-- NAVIGATION BAR -->
-  <!-- <div class="topnav" id="myTopnav">
-      <a href="index.html" class="active">Home</a>
-      <a href="netda.html">DA calculation</a>
-      <a href="inccal.html">Salary Increment</a>
-      <a href="mixcal.html">Full bill</a>
-      <a href="contact.html">Contact</a>
-      <a href="#about">About</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-    </script> -->
-
+<!-- Navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+
+
+    <div class="container-fluid">  
 
       <a class="navbar-brand" href="#">SalaryCal</a>
 
@@ -57,12 +37,12 @@
               Calculate
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#Calculate">Daily Allowance</a></li>
-              <li><a class="dropdown-item" href="#Calculate">Salary Increment</a></li>
+              <li><a class="dropdown-item" href="netda.html">Daily Allowance</a></li>
+              <li><a class="dropdown-item" href="inccal.html">Salary Increment</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#Calculate">Full Salary</a></li>
+              <li><a class="dropdown-item" href="mixcal.html">Full Salary</a></li>
             </ul>
           </li>
 
@@ -78,7 +58,7 @@
     </div>
   </nav>
 
-
+<!-- welcome and goal of website -->
 
   <div class="top-container" id="Home">
     <h1><span><img src="CSS/Images/WebIcon.png" alt="..."> </span> SalaryCalculation</h1>
@@ -86,17 +66,25 @@
       Calculate Salary of you and your friends at a single place witn ease in seconds.
       Also, Super fast downloading of results.
     </p>
-    <button type="button" class="btn btn-dark btn-lg btn-block">Let's Go</button>
+    <button type="button" class="btn btn-dark btn-lg btn-block"><a href="#Calculate">Lets's Go</a></button>
   </div>
 
-<br>
+
+
+  <br>
+
+<!-- tutorial video -->
 
   <div class="video-container">
     <h1>Learn to use this site Effectively</h1>
     <iframe width="64%" height="70%" src="https://www.youtube.com/embed/vjMqnithfc8?autoplay=1&mute=0"></iframe>
   </div>
 
-<br>
+
+
+  <br>
+
+<!-- main pages to redirect -->
 
   <div class="button-container" id="Calculate">
     <h2>Features</h2>
@@ -106,16 +94,20 @@
       <p>Dearness Allowance (DA) is the cost-of-living adjustment allowance that the government provides to both current and retired members of the public sector</p>
     </div>
     <div class="button-row">
-      <img onclick="document.location='inccal.html'" class="INCimg"  src="CSS/Images/INC.png" alt="">
+      <img onclick="document.location='inccal.html'" class="INCimg" src="CSS/Images/INC.png" alt="">
       <h3 onclick="document.location='inccal.html'">Salary Increment calculation</h3>
-      <p>Salary increment is measured as a percentage of an employee's overall base pay. It is usually a percentage of the employee's annual salary. Increments are used by employers to increase or decrease base salary, as well as to grant incentives.</p>
+      <p>Salary increment is measured as a percentage of an employee's overall base pay. It is usually a percentage of the employee's annual salary. Increments are used by employers to increase or decrease base salary, as well as to grant incentives.
+      </p>
     </div>
     <div class="button-row">
-      <img onclick="document.location='mixcal.html'" class="FULLimg"  src="CSS/Images/FULL.png" alt="">
+      <img onclick="document.location='mixcal.html'" class="FULLimg" src="CSS/Images/FULL.png" alt="">
       <h3 onclick="document.location='mixcal.html'">Full Salary calculations</h3>
       <p>Full Salary will be calculated including all types of allowances: 1.DA 2.HRA 3.Medical 4.Travel with Salary Increment</p>
     </div>
   </div>
+
+
+<!-- Contact div -->
 
   <div class="contact-me" id="contact">
     <h1>Get In Touch</h1>
@@ -123,28 +115,20 @@
     <p>Connect with me using the button below to talk with me.</p>
     <a class="btn btn-info btn-lg btn-block" href="mailto:sahillohan07@email.com">CONTACT ME</a>
   </div>
-</div>
-
-
-<div class="bottom-container bg-dark " id="About">
-  <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-  <a class="footer-link" href="https://twitter.com/">Instagram</a>
-  <a class="footer-link" href="https://www.appbrewery.co/">Github</a>
-<br>
-  <p>© 2023 SalaryCal @ GJUians.</p>
-</div>
-
-
-
-
-  <!-- <div class="MainContent">
-  <div class="classdiv3" id="div3">
-    <button id="daBtn" type="button" name="button" >Calculate DA</button>
-    <button id="increBtn" type="button" name="button" onclick="document.location='inccal.html'">Calculate Increment</button>
-    <button id="mixBtn" type="button" name="button" onclick="document.location='mixcal.html'">Calculate Both</button>
   </div>
-</div> -->
 
+
+
+
+<!-- Footer -->
+
+  <div class="bottom-container bg-dark " id="About">
+    <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+    <a class="footer-link" href="https://twitter.com/">Instagram</a>
+    <a class="footer-link" href="https://www.appbrewery.co/">Github</a>
+    <br>
+    <p>© 2023 SalaryCal @ GJUians.</p>
+  </div>
 
   <!-- Bootstrap scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
