@@ -66,6 +66,13 @@ label{
   display: none;
 }
 
+.carousel{
+  transition-duration: 30s;
+}
+.carousel-item {
+  transition-duration:0s ;
+  transition-delay: 0ms;
+}
 .Tutorialcontainer{
 
   padding: 50px 0;;
@@ -73,6 +80,7 @@ label{
 .Tutorial{
   max-height: 500px;
 }
+
 .button-container {
   background-color: #B9F3FC;
   padding:20px;
