@@ -74,7 +74,7 @@ function viewResultFunc() {
   alert("Please click save following ok");
     var divContents = document.getElementById("ResultToBeDownloaded").innerHTML;
     var a = window.open('', '', 'height=500, width=500');
-    a.document.write('<html><head>');
+    a.document.write('<html><head><title>EmployeeReport'+new Date().toLocaleString()+'</title>');
     a.document.write('<style>body{text-align: center;}h1{padding: 1.5em 0 1.5em 0;}</style></head>');
     a.document.write('<body > <h1>Employee Report <br>');
     a.document.write(divContents);
