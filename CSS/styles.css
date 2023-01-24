@@ -66,6 +66,10 @@ label{
   display: none;
 }
 
+
+.Tutorial{
+  max-height: 500px;
+}
 .button-container {
   background-color: #B9F3FC;
   padding:20px;
