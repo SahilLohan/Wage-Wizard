@@ -66,9 +66,7 @@ label{
   display: none;
 }
 
-.carousel{
-  transition-duration: 30s;
-}
+
 .carousel-item {
   transition-duration:0s ;
   transition-delay: 0ms;
